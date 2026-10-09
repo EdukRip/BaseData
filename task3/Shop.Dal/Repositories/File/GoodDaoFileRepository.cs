@@ -14,8 +14,4 @@ public class GoodDaoFileRepository : BaseFileRepository<GoodDao>
         var p = line.Split('|');
         return new GoodDao(int.Parse(p[0]), p[1], p[2]);
     }
-
-    protected override int GetId(GoodDao e) => e.Id;
-
-    protected override void SetId(GoodDao e, int id) => e.AssignId(id);
 }

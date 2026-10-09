@@ -13,7 +13,7 @@ public class ClientDaoFileRepository : BaseFileRepository<ClientDao>
     protected override string ToLine(ClientDao e)
     {
         var bd = e.Birthday.ToString(DateFormat) ?? "";
-        return $"{e.Id}|{e.Name}|{e.LastName}|{e.MiddleName}|{bd}";
+        return $"{e.Id}|{e.Name}|{e.LastName}|{e.Patronymic}|{bd}";
     }
 
     protected override ClientDao FromLine(string line)
@@ -24,8 +24,4 @@ public class ClientDaoFileRepository : BaseFileRepository<ClientDao>
 
         return new ClientDao(int.Parse(p[0]), p[1], p[2], p[3], bd);
     }
-
-    protected override int GetId(ClientDao e) => e.Id;
-
-    protected override void SetId(ClientDao e, int id) => e.AssignId(id);
 }

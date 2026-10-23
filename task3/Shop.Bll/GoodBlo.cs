@@ -2,9 +2,6 @@ using Core;
 
 namespace Shop.Bll;
 
-/// <summary>
-/// Бизнес-сущность «товар».
-/// </summary>
 public class GoodBlo : IPrimary
 {
     private string _name = string.Empty;
@@ -49,6 +46,8 @@ public class GoodBlo : IPrimary
 
     public void AssignId(int id) => Id = id;
 
-    public override string ToString() =>
-        $"GoodBlo(Id={Id}, Name={Name}, Code={Code})";
+    public override string ToString()
+    {
+        return $"{Id}|{Name}|{Code}";
+    }
 }

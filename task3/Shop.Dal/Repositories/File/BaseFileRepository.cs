@@ -5,6 +5,7 @@ using Core;
 
 
 namespace Shop.Dal.Repositories.File;
+
 using File = System.IO.File;
 public abstract class BaseFileRepository<T> : BaseRepository<T>
     where T : class, IPrimary
@@ -22,12 +23,8 @@ public abstract class BaseFileRepository<T> : BaseRepository<T>
             File.WriteAllText(filePath, string.Empty);
     }
 
-    // --- методы, обязательные для наследников ---
-
     protected abstract string ToLine(T entity);
     protected abstract T FromLine(string line);
-
-    // --- низкоуровневые операции (специфика TXT) ---
 
     protected override IEnumerable<T> GetAll() =>
         ReadLines().Select(FromLine).ToList();
@@ -66,8 +63,6 @@ public abstract class BaseFileRepository<T> : BaseRepository<T>
         WriteLines(filtered);
         return true;
     }
-
-    // --- работа с файлом ---
 
     private List<string> ReadLines()
     {

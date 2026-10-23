@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text.Json;
 using Core;
 
-
 namespace Shop.Dal.Repositories.Json;
 
 using File = System.IO.File;
@@ -25,8 +24,6 @@ public abstract class BaseJsonRepository<T> : BaseRepository<T>
         if (!File.Exists(filePath))
             File.WriteAllText(filePath, "[]");
     }
-
-    // --- низкоуровневые операции (специфика JSON) ---
 
     protected override IEnumerable<T> GetAll() => Load();
 
@@ -59,8 +56,6 @@ public abstract class BaseJsonRepository<T> : BaseRepository<T>
         Save(items);
         return true;
     }
-
-    // --- сериализация JSON ---
 
     private List<T> Load()
     {

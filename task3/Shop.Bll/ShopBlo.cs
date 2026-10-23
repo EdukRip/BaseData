@@ -2,9 +2,6 @@ using Core;
 
 namespace Shop.Bll;
 
-/// <summary>
-/// Бизнес-сущность «магазин».
-/// </summary>
 public class ShopBlo : IPrimary
 {
     private string _name = string.Empty;
@@ -34,14 +31,12 @@ public class ShopBlo : IPrimary
         }
     }
 
-    // Конструктор для новой сущности
     public ShopBlo(string name, string code)
     {
         Name = name;
         Code = code;
     }
 
-    // Конструктор для восстановления из хранилища
     public ShopBlo(int id, string name, string code)
     {
         Id = id;
@@ -49,9 +44,10 @@ public class ShopBlo : IPrimary
         Code = code;
     }
 
-    // Для IPrimary — нужен, если BLL будет использоваться репозиториями
     public void AssignId(int id) => Id = id;
 
-    public override string ToString() =>
-        $"ShopBlo(Id={Id}, Name={Name}, Code={Code})";
+    public override string ToString()
+    {
+        return $"{Id}|{Name}|{Code}";
+    }
 }

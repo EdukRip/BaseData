@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Core;
@@ -7,6 +8,7 @@ namespace Shop.Dal.Daos;
 [DataContract]
 public class GoodDao : IPrimary
 {
+    [Key]
     [DataMember]
     [JsonInclude]
     public int Id {get; private set;}
@@ -16,7 +18,7 @@ public class GoodDao : IPrimary
     public string? Code {get; set;}
 
     public void AssignId(int newId) {Id = newId;}
-
+    protected GoodDao() { }
     public GoodDao(string? name, string? code)
     {
         Id = 0;

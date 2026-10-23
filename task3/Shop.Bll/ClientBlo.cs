@@ -2,9 +2,6 @@ using Core;
 
 namespace Shop.Bll;
 
-/// <summary>
-/// Бизнес-сущность «клиент».
-/// </summary>
 public class ClientBlo : IPrimary
 {
     private static readonly DateTime DefaultBirthday = new DateTime(1900, 1, 1);

@@ -72,7 +72,7 @@ using Shop.Dal.Repositories.Xml;
 
 // БАЗА ДАННЫХ
 
-Console.WriteLine("\n=== DATABASE ===");
+Console.WriteLine("\nБАЗА ДАННЫХ");
 
 var context = new ShopEntityContext("task3/Shop.Dal/Data/shop.db");
 var shopDb = new ShopDaoDataBaseRepository(context);

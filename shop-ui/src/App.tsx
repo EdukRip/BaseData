@@ -6,9 +6,10 @@ import { ShopsPage } from './pages/shops/ui/shopsPage';
 const App = () => {
   return (
     <>
-      <ShopsPage />
+      <ShopsPage msg = "Test" />
       <GoodsPage />
       <ClientsPage />
+      <ShopsPage msg = "ТекстТестовыйМожноВДвухВидах"></ShopsPage>
     </>
   );
 };

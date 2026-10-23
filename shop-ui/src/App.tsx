@@ -1,7 +1,7 @@
 import './App.css';
-import { ClientsPage } from './pages/clients/ui/clientsPage';
-import { GoodsPage } from './pages/goods/ui/goodsPage';
-import { ShopsPage } from './pages/shops/ui/shopsPage';
+// import { ClientsPage } from './pages/clients/ui/clientsPage';
+// import { GoodsPage } from './pages/goods/ui/goodsPage';
+// import { ShopsPage } from './pages/shops/ui/shopsPage';
 import { NavLink, Outlet } from 'react-router';
 
 const App = () => {

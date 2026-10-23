@@ -1,9 +1,12 @@
+import { NavLink } from "react-router";
+
 export const GoodsPage = () => {
   return (
     <>
       <h1>Товары</h1>
       <p>Список товаров</p>
-      <h2>Тест №2</h2>
+      
+      <NavLink to = "/" end>Домашняя страница</NavLink>
     </>
   );
 };  

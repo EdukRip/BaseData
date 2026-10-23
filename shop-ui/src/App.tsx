@@ -12,6 +12,8 @@ const App = () => {
       <NavLink to="/shops">Магазины</NavLink>
       <NavLink to="/goods">Товары</NavLink>
       <Outlet />
+
+      {/* <NavLink to="/" end>Домашняя страница</NavLink> */}
     </div>
   );
 };

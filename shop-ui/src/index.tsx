@@ -22,7 +22,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'shops',
-        element: <ShopsPage msg = ""/>,
+        element: <ShopsPage msg="" />,
       }
     ]
   },
@@ -33,7 +33,7 @@ if (rootEl) {
   const root = createRoot(rootEl);
   root.render(
     <StrictMode>
-      <RouterProvider router = {router} />
+      <RouterProvider router={router} />
     </StrictMode>,
   );
 }

@@ -6,12 +6,12 @@ import { NavLink, Outlet } from 'react-router';
 
 const App = () => {
   return (
-    <div className = "content">
+    <div className="content">
       App
-      <NavLink to = "/clients">Клиенты</NavLink>
-      <NavLink to = "/shops">Магазины</NavLink>
-      <NavLink to = "/goods">Товары</NavLink>
-      <Outlet/>
+      <NavLink to="/clients">Клиенты</NavLink>
+      <NavLink to="/shops">Магазины</NavLink>
+      <NavLink to="/goods">Товары</NavLink>
+      <Outlet />
     </div>
   );
 };

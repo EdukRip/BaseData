@@ -4,19 +4,24 @@ import './App.css';
 // import { ShopsPage } from './pages/shops/ui/shopsPage';
 import { NavLink, Outlet } from 'react-router';
 import { Layout, Menu } from 'antd';
+import { Routings } from './shared/routing/routings';
 
 const menuItems = [
   {
+    key: "home",
+    label: <NavLink to="/" end>Дом</NavLink>,
+  },
+  {
     key: "shops",
-    label: <NavLink to="/shops">Магазины</NavLink>,
+    label: <NavLink to={Routings.shop.list.toNavigate()}>Магазины</NavLink>,
   },
   {
     key: "clients",
-    label: <NavLink to="/clients">Клиенты</NavLink>,
+    label: <NavLink to={Routings.client.list.toNavigate()}>Клиенты</NavLink>,
   },
   {
     key: "goods",
-    label: <NavLink to="/goods">Товары</NavLink>,
+    label: <NavLink to={Routings.good.list.toNavigate()}>Товары</NavLink>,
   },
 ];
 
